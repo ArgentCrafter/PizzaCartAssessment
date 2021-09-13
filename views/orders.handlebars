@@ -1,3 +1,18 @@
-<div>
-    <h1>PlaceHolder lmao</h1>
+<div class="header">
+  <a href="/Order">Home</a>
+  <h1>Pizza Inc.</h1>
+</div>
+<div class="orders">
+  <h1>Pizza orders:</h1>
+  <br />
+  <div class="orderList">
+    {{#each orders}}
+      <h3>Order
+        {{this.orderID}}:
+        {{this.status}}
+        - Price:
+        {{this.amount}}</h3>
+    {{/each}}
+  </div>
+  <a href="/clear" class="cartBtn">Clear orders</a>
 </div>

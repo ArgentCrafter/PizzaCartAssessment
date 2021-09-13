@@ -7,25 +7,29 @@
   <div class="shopCart">
     <h1>Shopping Cart:</h1>
     <br />
-    <h3>Small Pizza x{{smallCount}}</h3>
-    <h3>Medium Pizza x{{medCount}}</h3>
-    <h3>Large Pizza x{{largeCount}}</h3>
-    <br>
-    <button class="cartBtn">Order</button>
+    <h3>Small Pizza x{{smallCount}} : {{smallPrice}}</h3>
+    <h3>Medium Pizza x{{medCount}} : {{medPrice}}</h3>
+    <h3>Large Pizza x{{largeCount}} : {{largePrice}}</h3>
+    <br />
+    <a href="/place" class="cartBtn">Order</a>
   </div>
   <br />
   <div class="menu">
     <div class="smallPizza menuItem">
       <img src="Pizza.png" />
-      <br />
-      <h4>Large Margeritha pizza with 3 toppings max. 3 meat toppings max. 3 or
+      <h3>Small</h3>
+      <h3>R31.99</h3>
+      <h3>------------------</h3>
+      <h4>Small Margeritha pizza with 3 toppings max. 1 meat toppings max. 3 or
         less other toppings</h4>
       <br />
       <a href="/order/small" class="buyBtn">Buy</a>
     </div>
     <div class="mediumPizza menuItem">
       <img src="Pizza.png" />
-      <br />
+      <h3>Medium</h3>
+      <h3>R58.99</h3>
+      <h3>-------------------</h3>
       <h4>Medium Margeritha pizza with 3 toppings max. 2 meat toppings max. 3 or
         less other toppings</h4>
       <br />
@@ -33,8 +37,10 @@
     </div>
     <div class="largePizza menuItem">
       <img src="Pizza.png" />
-      <br />
-      <h4>Small Margeritha pizza with 3 toppings max. 1 meat toppings max. 3 or
+      <h3>Large</h3>
+      <h3>R87.99</h3>
+      <h3>-------------------</h3>
+      <h4>Large Margeritha pizza with 3 toppings max. 1 meat toppings max. 3 or
         less other toppings</h4>
       <br />
       <a href="/order/large" class="buyBtn">Buy</a>
