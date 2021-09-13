@@ -1,21 +1,106 @@
 body {
-	background-color: greenyellow;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(68, 255, 210);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .container {
-	margin: auto;
-	background-color: honeydew;
-	width: 80%;
-	padding: 1em;
+  margin: auto;
+  background-color: rgb(135, 246, 255);
+  width: 80%;
+  padding: 1em;
+  padding-top: 0px;
+  border-radius: 10px;
 }
 
+.content {
+  padding: 5px;
+  text-align: center;
+}
 
-.counter {
-	background-color: lightgray;
-	font-size: 2em;
-	width: 3em;
-	text-align: center;
-	padding: 0.5em;
-	margin-bottom: 0.25em;
+.shopCart {
+  background-color: rgb(255, 172, 129);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.header {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.header a {
+  margin-top: 20px;
+  padding: 10px;
+  float: right;
+  color: black;
+  border-radius: 10px;
+  background-color: rgb(68, 255, 210);
+  text-decoration: none;
+}
+
+.header a:hover {
+  background-color: rgb(34, 140, 115);
+  color: white;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuItem {
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 15px;
+  background-color: rgb(242, 187, 5);
+  border-radius: 8px;
+}
+
+.menuItem img {
+  width: 90px;
+  height: 90px;
+}
+
+.buyBtn {
+	background-color: lightgreen;
+	padding: 5px 20px 5px 20px;
+	border: solid 2px rgb(95, 160, 95);
+	border-radius: 5px;
+	color: black;
+	text-decoration: none;
+}
+
+.cartBtn {
+	background-color: lightgreen;
+	margin-bottom: 5px;
+	padding: 10px 25px 10px 25px;
+	border: solid 2px rgb(95, 160, 95);
+	border-radius: 5px;
+	color: black;
+	text-decoration: none;
+}
+
+.buyBtn:hover {
+	background-color: rgb(95, 160, 95);
+	color: white;
+}
+
+.cartBtn:hover {
+	background-color: rgb(95, 160, 95);
+	color: white;
+}
+
+.footer {
+  border-radius: 8px;
+  padding: 5px;
+  overflow: auto;
+}
+
+.address {
+  float: right;
+}
+
+.contactInfo {
+  float: left;
 }

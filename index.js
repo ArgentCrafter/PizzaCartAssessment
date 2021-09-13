@@ -16,19 +16,17 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-let counter = 0;
-
 app.get('/', function(req, res) {
-	res.render('index', {
-		counter
-	});
+	res.redirect('/Order')
 });
 
-app.post('/count', function(req, res) {
-	counter++;
-	res.redirect('/')
-});
+app.get('/Order', function(req, res) {
+	res.render('index')
+})
 
+app.get('/OrdersList', function(req, res) {
+	res.render('orders')
+})
 
 // start  the server and start listening for HTTP request on the PORT number specified...
 app.listen(PORT, function() {

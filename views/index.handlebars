@@ -1,15 +1,63 @@
-<h1>Counter Index</h1>
-
-
-<div>
-    Start here
-
-    <form action="/count" method="post">
-        <div class="counter" >
-            {{counter}}
-        </div>    
-        <input type="submit" value="Press button to count">
-    
-    </form>
-
+<div class="header">
+  <a href="/OrdersList">Orders</a>
+  <h1>Pizza Inc.</h1>
+</div>
+<br />
+<div class="content">
+  <div class="shopCart">
+    <h1>Shopping Cart:</h1>
+    <br />
+    <h3>Small Pizza x{{smallCount}}</h3>
+    <h3>Medium Pizza x{{medCount}}</h3>
+    <h3>Large Pizza x{{largeCount}}</h3>
+    <br>
+    <button class="cartBtn">Order</button>
+  </div>
+  <br />
+  <div class="menu">
+    <div class="smallPizza menuItem">
+      <img src="Pizza.png" />
+      <br />
+      <h4>Large Margeritha pizza with 3 toppings max. 3 meat toppings max. 3 or
+        less other toppings</h4>
+      <br />
+      <a href="/order/small" class="buyBtn">Buy</a>
+    </div>
+    <div class="mediumPizza menuItem">
+      <img src="Pizza.png" />
+      <br />
+      <h4>Medium Margeritha pizza with 3 toppings max. 2 meat toppings max. 3 or
+        less other toppings</h4>
+      <br />
+      <a href="/order/medium" class="buyBtn">Buy</a>
+    </div>
+    <div class="largePizza menuItem">
+      <img src="Pizza.png" />
+      <br />
+      <h4>Small Margeritha pizza with 3 toppings max. 1 meat toppings max. 3 or
+        less other toppings</h4>
+      <br />
+      <a href="/order/large" class="buyBtn">Buy</a>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="address">
+    <h5>Pizza Plaza
+      <br />
+      Dough Road
+      <br />
+      Base Town
+    </h5>
+  </div>
+  <div class="contactInfo">
+    <h5>Contact us at: (021)-541-1000 twitter
+      <br />
+      /fb
+      <br />
+      /insta
+      <br />
+      @PizzaInc.
+    </h5>
+  </div>
 </div>
