@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A basic ExpressJS application configured with Form support and Handlebars templating.",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha",
     "start": "node index.js"
