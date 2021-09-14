@@ -7,9 +7,24 @@
   <div class="shopCart">
     <h1>Shopping Cart:</h1>
     <br />
-    <h3>Small Pizza x{{smallCount}} : {{smallPrice}}</h3>
-    <h3>Medium Pizza x{{medCount}} : {{medPrice}}</h3>
-    <h3>Large Pizza x{{largeCount}} : {{largePrice}}</h3>
+    <h3>Small Pizza x{{smallCount}} : R{{smallPrice}}</h3>
+    <a href="/order/small" class="shopBtn">+</a><a
+      href="/redact/small"
+      class="shopBtn"
+    >-</a>
+    <h3>Medium Pizza x{{medCount}} : R{{medPrice}}</h3>
+    <a href="/order/medium" class="shopBtn">+</a><a
+      href="/redact/medium"
+      class="shopBtn"
+    >-</a>
+    <h3>Large Pizza x{{largeCount}} : R{{largePrice}}</h3>
+    <a href="/order/large" class="shopBtn">+</a><a
+      href="/redact/large"
+      class="shopBtn"
+    >-</a>
+    <h3>Total Cost: R{{totalCost}}</h3>
+    <br />
+    <br />
     <br />
     <a href="/place" class="cartBtn">Order</a>
   </div>

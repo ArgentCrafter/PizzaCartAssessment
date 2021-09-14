@@ -64,32 +64,46 @@ body {
 }
 
 .buyBtn {
-	background-color: lightgreen;
-	padding: 5px 20px 5px 20px;
-	border: solid 2px rgb(95, 160, 95);
-	border-radius: 5px;
-	color: black;
-	text-decoration: none;
+  background-color: lightgreen;
+  padding: 5px 20px 5px 20px;
+  border: solid 2px rgb(95, 160, 95);
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
 }
 
 .cartBtn {
-	background-color: lightgreen;
-	margin-bottom: 5px;
-	padding: 10px 25px 10px 25px;
-	border: solid 2px rgb(95, 160, 95);
-	border-radius: 5px;
-	color: black;
-	text-decoration: none;
+  background-color: lightgreen;
+  margin-bottom: 5px;
+  padding: 10px 25px 10px 25px;
+  border: solid 2px rgb(95, 160, 95);
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
 }
 
 .buyBtn:hover {
-	background-color: rgb(95, 160, 95);
-	color: white;
+  background-color: rgb(95, 160, 95);
+  color: white;
 }
 
 .cartBtn:hover {
-	background-color: rgb(95, 160, 95);
-	color: white;
+  background-color: rgb(95, 160, 95);
+  color: white;
+}
+
+.shopBtn {
+  background-color: lightgreen;
+  border: solid 2px rgb(95, 160, 95);
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+  padding: 2px 10px 2px 10px;
+}
+
+.shopBtn:hover {
+  background-color: rgb(95, 160, 95);
+  color: white;
 }
 
 .footer {
@@ -107,14 +121,26 @@ body {
 }
 
 .orders {
-	padding-top: 10px;
-	text-align: center;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .orderList {
-	background-color: rgb(255, 172, 129);
-	border-radius: 10px;
-	padding: 5px;
-	margin-bottom: 20px;
-	overflow: hidden;
+  background-color: rgb(255, 172, 129);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderList h3 {
+  float: left;
+  margin: 20px;
+}
+
+.orderList a {
+  float: right;
+  margin: 15px;
 }

@@ -26,12 +26,19 @@ app.get('/', function (req, res) {
 });
 
 app.get('/Order', function (req, res) {
-	res.render('index', { smallCount: pizzaCart['small'], smallPrice: 'R' + pizzaCart['small'] * 31.99, medCount: pizzaCart['medium'], medPrice: 'R' + pizzaCart['medium'] * 58.99, largeCount: pizzaCart['large'], largePrice: 'R' + pizzaCart['large'] * 87.99 })
+	res.render('index', { smallCount: pizzaCart['small'], smallPrice: pizzaCart['small'] * 31.99, medCount: pizzaCart['medium'], medPrice: pizzaCart['medium'] * 58.99, largeCount: pizzaCart['large'], largePrice: pizzaCart['large'] * 87.99, totalCost: (pizzaCart['small'] * 31.99) + (pizzaCart['medium'] * 58.99) + (pizzaCart['large'] * 87.99) })
 })
 
 app.get('/order/:size', function (req, res) {
-	// factory().addToCart(req.params.size);
 	pizzaCart[req.params.size] += 1;
+
+	res.redirect('/Order');
+})
+
+app.get('/redact/:size', function (req, res) {
+	if (pizzaCart[req.params.size] > 0) {
+		pizzaCart[req.params.size] -= 1;
+	}
 
 	res.redirect('/Order');
 })
@@ -39,20 +46,36 @@ app.get('/order/:size', function (req, res) {
 app.get('/place', function (req, res) {
 	let total = (pizzaCart["small"] * 31.99) + (pizzaCart["medium"] * 58.99) + (pizzaCart["large"] * 87.99);
 	if (total > 0) {
-		orderList.push({ orderID: orderList.length + 1, status: "Payment Due", amount: total });
+		orderList.push({ orderID: orderList.length + 1, status: "Payment Due", amount: total, action: "Pay" });
 		pizzaCart = { large: 0, medium: 0, small: 0 };
 	}
 	res.redirect('/Order');
 })
 
-app.get('/clear', function(req, res) {
+app.get('/clear', function (req, res) {
 	orderList = [];
 
 	res.redirect('OrdersList')
 })
 
 app.get('/OrdersList', function (req, res) {
-	res.render('orders', {orders: orderList})
+	res.render('orders', { orders: orderList })
+})
+
+app.get('/Payment%20Due/:orderID', function (req, res) {
+	let currOrder = orderList[req.params.orderID - 1];
+	currOrder['status'] = "Paid";
+	currOrder['action'] = 'Collect';
+
+	res.redirect('/OrdersList');
+})
+
+app.get('/Paid/:orderID', function (req, res) {
+	let currOrder = orderList[req.params.orderID - 1];
+	currOrder['status'] = "Collected";
+	delete currOrder['action'];
+
+	res.redirect('/OrdersList');
 })
 
 // start  the server and start listening for HTTP request on the PORT number specified...

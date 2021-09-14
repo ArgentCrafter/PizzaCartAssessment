@@ -7,11 +7,19 @@
   <br />
   <div class="orderList">
     {{#each orders}}
-      <h3>Order
-        {{this.orderID}}:
-        {{this.status}}
-        - Price:
-        {{this.amount}}</h3>
+      <div>
+        <h3>Order
+          {{this.orderID}}:
+          {{this.status}}
+          - Price: R
+          {{this.amount}}</h3>
+        {{#if this.action}}
+          <a
+            href="{{this.status}}/{{this.orderID}}"
+            class="buyBtn"
+          >{{this.action}}</a>
+        {{/if}}
+      </div>
     {{/each}}
   </div>
   <a href="/clear" class="cartBtn">Clear orders</a>
