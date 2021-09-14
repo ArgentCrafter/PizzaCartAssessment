@@ -1,4 +1,2 @@
-# UJ Express introduction 101
-
-A basic ExpressJS application configured with Form support and Handlebars templating.
+[![Build Status](https://app.travis-ci.com/ArgentCrafter/PizzaCartAssessment.svg?branch=gh-pages)](https://app.travis-ci.com/ArgentCrafter/PizzaCartAssessment)
 
